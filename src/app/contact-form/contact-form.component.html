@@ -1,0 +1,49 @@
+<div class="container">
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+<h1>Form</h1>
+
+
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Name" name="name" ngModel #name="ngModel">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      
+    </mat-form-field>
+    <p *ngIf="name.dirty">Dirty</p>
+  
+<br>
+    
+    <mat-form-field appearance="outline">
+      <mat-label>email</mat-label>
+      <input matInput placeholder="email" name="email" ngModel #email="ngModel" required>
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      
+    </mat-form-field>
+ 
+  <p *ngIf="email.touched && email.invalid" >Required</p>
+  <br>
+    
+    <mat-form-field appearance="outline">
+      <mat-label>Phone number</mat-label>
+      <input matInput placeholder="Phone number" name="phone" ngModel #phone="ngModel">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      
+    </mat-form-field>
+    <p *ngIf="phone.touched">Touched</p>
+ 
+  
+  <section>
+  
+    <div class="example-button-row">
+    
+      <button mat-raised-button color="primary">Submit</button>
+
+      
+    </div>
+  </section>
+</form>
+</div>
+
+
+
+

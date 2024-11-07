@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Todo List</h1>
+    <input type="text" [(ngModel)]="newTask" placeholder="Enter a new task" class="input">
+    <button (click)="addTask()" class="add">Add Task</button>
+  
+    <ol class="list">
+      <li *ngFor="let task of tasks"class="todo-item">
+        {{ task }}
+        
+        <button (click)="deleteTask(task)" class="done">Task complete</button>
+        <hr>
+      </li>
+    </ol>
+</div>

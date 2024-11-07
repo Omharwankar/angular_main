@@ -1,0 +1,15 @@
+
+
+<input type="text" placeholder="Search by movie title" [(ngModel)]="searchTerm">
+<div class="container">
+
+  <div class="movieList" [ngClass]="{'odd':o,'even':e}" *ngFor="let movie of filteredMovies;let o=odd ;let e=even">
+    <h1>Movie Name:{{movie.title}}</h1>
+    <p>IMBD rating:{{movie.rating}}</p>
+    <p>Year:{{movie.year}}</p>
+  </div>
+
+
+ </div>
+
+

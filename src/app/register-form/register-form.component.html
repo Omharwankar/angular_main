@@ -1,0 +1,40 @@
+
+<form [formGroup]="hospitalRegistration">
+  <mat-form-field appearance="outline">
+      <mat-label>name</mat-label>
+      <input matInput placeholder="name"  formControlName="name" >
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label>email</mat-label>
+      <input matInput placeholder="email"  formControlName="email">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> 
+    </mat-form-field>
+    <br>
+    <div>
+      <button (click)="addTask()">Add Patient</button>
+    </div>
+    <div formArrayName="patientList" *ngFor="let item of list?.controls; let i = index">
+      <div [formGroupName]="i"> 
+    <mat-form-field appearance="outline">
+      <mat-label>Patient name</mat-label>
+      <input matInput placeholder="Patient name"   formControlName="name">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> 
+    </mat-form-field>
+    <br><button (click)="removeQuantity(i)" class="btn">Remove</button>  <br>
+    <mat-form-field appearance="outline">
+      <mat-label>Patient Id</mat-label>
+      <input matInput placeholder="Patient Id"  formControlName="patientId" >
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> 
+    </mat-form-field>
+    
+    
+  </div>
+</div>
+        
+      
+      
+    
+    
+  

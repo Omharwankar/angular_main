@@ -1,0 +1,46 @@
+
+<form [formGroup]="register">
+    <mat-form-field appearance="outline">
+        <mat-label>name</mat-label>
+        <input matInput placeholder="name"  formControlName="name"  >
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="outline">
+        <mat-label>email</mat-label>
+        <input matInput placeholder="email"  formControlName="email">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> 
+      </mat-form-field>
+    
+      <br>
+      <mat-form-field appearance="outline">
+        <mat-label>Phone number</mat-label>
+        <input matInput placeholder="Phone Number" formControlName="phone" >
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        
+      </mat-form-field>
+      <br>
+      <div formGroupName="address">
+      <fieldset>
+        <legend>Address</legend>
+        
+          <br>
+         
+          <mat-form-field appearance="outline">
+            <mat-label>city</mat-label>
+            <input matInput placeholder="city" formControlName="city" >
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="outline">
+            <mat-label>state</mat-label>
+            <input matInput placeholder="state" formControlName="state" >
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+      </fieldset>
+    </div>
+  <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+  <button mat-raised-button color="primary" (click)="setting()">Setting</button>
+  <button mat-raised-button color="primary" (click)="patching()">Patching</button>
+
+</form>
